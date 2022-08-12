@@ -44,7 +44,7 @@ const SearchCategory = () => {
             name="searchInput"
             type="text"
             placeholder="what are you looking for? ..."
-            className="group bg:inherit w-4/6 h-16 text-lg mr-52 text-left border border-none focus:ring-0"
+            className="group  bg:inherit w-full md:w-4/6 h-16 text-lg ml-6  md:mr-52 text-left border border-none focus:ring-0"
           />
         </form>
     

@@ -14,7 +14,7 @@ const CardListSearch = () => {
     <div className="w-5/6  bg-slate-100 flex flex-col mx-auto">
       <h1 className="font-bold text-gray-800 text-center text-2xl mb-10 mt-4 ">Product</h1>
       <div
-        className="w-full container flex md:justify-evenly gap-5 md:flex-row flex-col items-center md:gap-8 
+        className="w-full container flex md:justify-evenly gap-5 md:flex-row flex-col items-center md:gap-10 
         flex-wrap justify-between"
       >
  
