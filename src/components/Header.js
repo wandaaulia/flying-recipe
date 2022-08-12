@@ -13,7 +13,6 @@ const Header = () => {
     let [open, setOpen] = useState(false);
     const [user] = useAuthState(auth);
 
-
     const navigate = useNavigate();
 
     const handleLogout = async () => {
@@ -24,8 +23,28 @@ const Header = () => {
         console.log(err);
       }
     
-    
     }
+
+      const toggle = () => {
+        setOpen(!open);
+      }
+   
+        const hideMenu = () => {
+            if(window.innerWidth > 640 && open){
+              setOpen(false);
+          
+            }
+        }
+
+         
+         if(!open){
+            window.removeEventListener("resize", hideMenu);
+          }else{
+              window.addEventListener("resize", hideMenu);
+          }
+        
+          
+    
 
     return (
       <header className="bg-white md:relative z-10  max-w-full md:p-2 border-box border border-white border-b-black">
@@ -38,7 +57,7 @@ const Header = () => {
               Flying Recipe
             </div>
             <div className="px-6 md:hidden hamburger">
-              <FontAwesomeIcon icon={faBars} className="min-h-full " onClick={() => setOpen(!open)} />
+              <FontAwesomeIcon icon={faBars} className="min-h-full " onClick={toggle} />
             </div>
           </div>
 
@@ -48,8 +67,8 @@ const Header = () => {
           >
             <ul
               className={`md:flex md:z-40 md:w-full p-4 gap-2 items-start md:items-center 
-            flex  md:gap-2 md:mx-auto 
-            md:p-4 md:justify-around ${open ? "flex-col" : "hidden"}`}
+            flex flex-row md:gap-2 md:mx-auto 
+            md:p-4 md:justify-around ${open ? "flex-col " : "hidden"}`}
             >
               <li>
                 <NavLink to="/">Home</NavLink>
