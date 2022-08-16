@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
-
+import Header from "../components/Header";
+import Footer from "../containers/Footer";
 import {createUserWithEmailAndPassword} from 'firebase/auth';
 import { auth } from '../config/firebase';
 
@@ -24,6 +25,8 @@ const Register = () => {
     }
   }
   return (
+    <>
+    <Header />
     <div className="w-full p-6 md:p-0 flex flex-row mx-auto bg-slate-100 justify-center ">
       <div className="bg-white mx-auto mt-20 w-full md:w-1/2 drop-shadow-lg flex flex-col gap-6 mb-10 p-20 rounded-lg">
         <form onSubmit={handleSubmit}>
@@ -46,6 +49,8 @@ const Register = () => {
         </button>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

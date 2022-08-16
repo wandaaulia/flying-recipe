@@ -79,7 +79,7 @@ const Header = () => {
                 </NavLink>
               </li>
               <li>
-                {!user.email ? (
+                {!user ? (
                   <NavLink to="login">Login</NavLink>
                 ) : (
                   <button onClick={handleLogout}>

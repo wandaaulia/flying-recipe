@@ -21,9 +21,9 @@ function App() {
           <Route
             path="/"
             element={
-              <ProctectedRoute>
+           
                 <Home />
-              </ProctectedRoute>
+           
             }
           />
 

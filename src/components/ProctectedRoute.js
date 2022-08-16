@@ -6,6 +6,7 @@ import { auth } from '../config/firebase';
 const ProctectedRoute = ({children, loginOnly = true}) => {
     const [user] = useAuthState(auth);
 
+    
     if(user && !loginOnly){
         return <Navigate to={'/'} />
     }

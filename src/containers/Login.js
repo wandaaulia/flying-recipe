@@ -4,6 +4,8 @@ import {useNavigate } from 'react-router-dom';
 // import { useAuth} from '../components/auth';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
+import Header from "../components/Header";
+import Footer from "../containers/Footer";
 
 const Login = () => {
   // const [user, setUser] = useState('');
@@ -36,6 +38,8 @@ const Login = () => {
      }
    };
     return (
+      <>
+      <Header/>
       <div className=" w-full p-6 md:p-0 flex flex-col 
        mx-auto bg-slate-100 justify-center items-center">
         <div className="bg-white mx-auto mt-20 w-full md:w-1/2 drop-shadow-lg flex flex-col gap-6 mb-10 p-20 rounded-lg">
@@ -60,7 +64,8 @@ const Login = () => {
         </button>
         </div>
       </div>
-      
+      <Footer />
+      </>
     );
 }
 
